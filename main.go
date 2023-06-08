@@ -1,8 +1,7 @@
+// main for the program
 package main
 
 import (
-	"github.com/go-playground/validator/v10"
-	_ "github.com/go-sql-driver/mysql"
 	"net/http"
 	"programmerzamannow/belajar-golang-restful-api/app"
 	"programmerzamannow/belajar-golang-restful-api/controller"
@@ -10,10 +9,12 @@ import (
 	"programmerzamannow/belajar-golang-restful-api/middleware"
 	"programmerzamannow/belajar-golang-restful-api/repository"
 	"programmerzamannow/belajar-golang-restful-api/service"
+
+	"github.com/go-playground/validator/v10"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-
 	db := app.NewDB()
 	validate := validator.New()
 	categoryRepository := repository.NewCategoryRepository()

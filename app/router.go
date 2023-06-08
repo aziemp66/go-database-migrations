@@ -1,11 +1,13 @@
 package app
 
 import (
-	"github.com/julienschmidt/httprouter"
 	"programmerzamannow/belajar-golang-restful-api/controller"
 	"programmerzamannow/belajar-golang-restful-api/exception"
+
+	"github.com/julienschmidt/httprouter"
 )
 
+// NewRouter : Router to export to main
 func NewRouter(categoryController controller.CategoryController) *httprouter.Router {
 	router := httprouter.New()
 
